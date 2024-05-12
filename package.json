@@ -60,7 +60,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
-    "release": "bumpp --tag false && nr publish"
+    "release": "bumpp && nr publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.42.1",
