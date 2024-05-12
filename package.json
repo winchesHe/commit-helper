@@ -2,7 +2,7 @@
   "publisher": "winches",
   "name": "moego-commit-helper",
   "displayName": "moego-commit-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Commit 信息 Jira 单辅助填写工具",
   "author": "winches",
@@ -59,7 +59,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
-    "release": "bumpp && nr publish"
+    "release": "bumpp --tag false && nr publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.42.1",
