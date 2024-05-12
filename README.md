@@ -1,5 +1,9 @@
 <h1 align="center">moego-commit-helper</h1>
 
+<p align="center">
+<img src="res/logo.png">
+</p>
+
 ## Usage
 
 打开终端，随后通过 `cmd+shift+p` 打开命令面板，输入 `moego-commit-helper`，选择所需的功能

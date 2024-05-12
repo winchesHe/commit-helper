@@ -2,7 +2,7 @@
   "publisher": "winches",
   "name": "moego-commit-helper",
   "displayName": "moego-commit-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Commit 信息 Jira 单辅助填写工具",
   "author": "winches",
