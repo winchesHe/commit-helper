@@ -2,13 +2,14 @@
   "publisher": "winches",
   "name": "moego-commit-helper",
   "displayName": "moego-commit-helper",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Commit 信息 Jira 单辅助填写工具",
   "author": "winches",
   "license": "MIT",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/winchesHe/commit-helper"
   },
   "categories": [
     "Other"
