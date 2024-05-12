@@ -1,0 +1,82 @@
+{
+  "publisher": "winches",
+  "name": "moego-commit-helper",
+  "displayName": "moego-commit-helper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Commit 信息 Jira 单辅助填写工具",
+  "author": "winches",
+  "license": "MIT",
+  "repository": {
+    "type": "git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "res/logo.png",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "activationEvents": [
+    "onCommand:moego-terminal-helper",
+    "onCommand:moego-terminal-helper-only-prefix"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "moego-terminal-helper",
+        "title": "MoeGo Commit 信息填写工具"
+      },
+      {
+        "command": "moego-terminal-helper-only-prefix",
+        "title": "MoeGo Commit 信息填写工具 (仅填写前缀e.g. ERP-1234)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "moego-terminal-helper-only-prefix",
+        "key": "ctrl+alt+T",
+        "mac": "cmd+shift+T"
+      },
+      {
+        "command": "moego-terminal-helper",
+        "key": "ctrl+alt+A",
+        "mac": "cmd+shift+A"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --external vscode",
+    "dev": "nr build --watch",
+    "lint": "eslint .",
+    "vscode:prepublish": "nr build",
+    "publish": "vsce publish --no-dependencies",
+    "pack": "vsce package --no-dependencies",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
+    "release": "bumpp && nr publish"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.42.1",
+    "@antfu/ni": "^0.17.2",
+    "@types/node": "^18.7.18",
+    "@types/vscode": "^1.69.0",
+    "eslint": "^8.52.0",
+    "rimraf": "^3.0.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vite": "^3.0.4",
+    "vitest": "^0.21.0",
+    "vsce": "^2.10.0",
+    "tsx": "^3.12.7",
+    "lint-staged": "^13.1.2",
+    "simple-git-hooks": "^2.8.1",
+    "bumpp": "^9.4.0",
+    "conventional-changelog-cli": "^4.1.0"
+  }
+}
